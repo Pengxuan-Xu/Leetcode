@@ -1,9 +1,9 @@
-let strOri = ['Aabb AA', 'aaBaA', 'aadfds'];
+let strOri = ['A man, a plan, a canal: Panama', 'aaBaA', 'aadfds'];
 strOri.forEach ( (strOri) => {
 	
 	strCheck = strOri.toLowerCase();
-	strCheck = strCheck.replace(/\s/g, '');
-	
+	strCheck = strCheck.replace(/[^\w]/g, '');
+	console.log(strCheck);
 	let strLen = strCheck.length;
 	let strPail = true ;
 	for (let n = 0; n < Math.floor(strLen/2); n++){
